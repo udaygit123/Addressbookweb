@@ -25,9 +25,6 @@ pipeline {
                 sh 'mvn package'
                 }
             }
-            stage('Deploy on contanier'){
-                steps{
-                deploy adapters: [tomcat9(credentialsId: '9c723133-b099-424b-8bf6-87a8555c6175', path: '', url: 'http://54.224.11.0:8081/')], contextPath: null, war: '**/*.war'
-        }
+
        }
 }}
