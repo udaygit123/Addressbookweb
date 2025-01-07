@@ -1,4 +1,0 @@
-FROM openjdk:17
-COPY target/*.war addressbook.war
-ENTRYPOINT ["java","-war","/addressbook.war"]
-
