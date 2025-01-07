@@ -15,6 +15,16 @@ pipeline {
                sh 'mvn clean compile'
                }
            }
+           stage('Test maven project') {
+               steps {
+               sh 'mvn clean test'
+       }
+       }
+            stage('package maven project') {
+                steps {
+                sh 'mvn package'
+                }
+            }
            
        }
 }
